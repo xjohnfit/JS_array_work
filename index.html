@@ -23,6 +23,14 @@
         }
         console.log(checkForFalsey()); //returns true because NaN is false
 
+        //function that returns the total number of characters in an array of strings
+        function getTotal() {
+            array = ['Rabbit', 'Football', 'Cracking']; //22
+            const count =  array.reduce((totalNumber, numbers) => totalNumber + numbers);
+            return count.length;
+        }
+        console.log(getTotal());
+
     </script>
 </body>
 </html>
