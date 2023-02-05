@@ -30,7 +30,44 @@
             return count.length;
         }
         console.log(getTotal());
+        
+        //function that checks wheater every number in an array is a square number
+        function checkSquares() {
+            const numbers = [9, 16, 81, 100, 135];
+            return numbers.every(num => Math.sqrt(num) % 1 === 0); 
+        }
+        console.log(checkSquares()); //return false because not every number is a square number
 
+        //function that returns the string elements of an array that
+        //is larger than the given length of characters 
+        function getWords(wordsArray, number) {
+            return words = wordsArray.filter(word => word.length >= number);
+        }
+        console.log(getWords(['Florida', 'Oregon', 'Massachusetts', 'Hawaii'], 7));
+        console.log(getWords(['Dog', 'Cat', 'Tiger', 'Jaguar'], 5));
+
+        //function that convert an array of string cms values, into array of numbers
+        function getValues() {
+            const cmStringNumbers = ['23cm', '5.6cm', '500cm'];
+            const stringToNumber = cmStringNumbers.map(numbers => parseFloat(numbers));
+            return stringToNumber;
+        }
+        console.log(getValues());
+
+        //function that counts number of vowels in a sentence
+        function getVowelCount(string) {
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            return string.split('').filter(letter => vowels.includes(letter)).length;
+        }
+        console.log(getVowelCount('Born and raised in Brazil'));
+        console.log(getVowelCount('I like Chantal just a little'));
+
+        //function that capitalises all first letter of each word in a string
+        function capitalise(string) {
+            return string.split(' ').map(word => word.charAt(0).toUpperCase() + word.substr(1)).join(' ');
+        }
+        console.log(capitalise('i want to go to california'));
+        console.log(capitalise('i like you just a little'));
     </script>
 </body>
 </html>
